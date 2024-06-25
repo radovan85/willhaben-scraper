@@ -1,0 +1,37 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="fragmentContent">
+	<link rel="stylesheet" type="text/css"
+		th:href="@{/css/components/carsList.css?newversion}" />
+
+	<div class="container" style="margin-bottom: 100px;">
+    <!-- Primer listinga automobila -->
+    <div class="car-listing" th:each="tempCar : ${allCars}">
+    <img th:src="${tempCar.carImageUrl}" alt="Slika automobila">
+    <div class="car-details">
+        <span th:text="${tempCar.description}"></span>
+        <div class="price" style="display: inline-flex;">
+            <span>&euro;</span>
+            <span th:text="${tempCar.price}"></span>
+        </div>
+        <span class="year" th:text="${'Year: ' + tempCar.carYear}"></span> 
+        <span class="mileage" th:text="${'Mileage: ' + tempCar.mileage}"></span>
+        <span th:text="${'Created: ' + tempCar.published}"></span>  
+        <div class="location">
+            <div class="location-icon"></div>
+            <span th:text="${tempCar.district + '  ' + tempCar.address}"></span>
+        </div>
+        <span class="address" th:text="${tempCar.location + '  ' + tempCar.state + '  ' + tempCar.country}"></span>
+    	<div class="buttons-container">
+    	<!--  
+        <button class="details-btn">Details</button>
+        -->
+        <button class="willhaben-btn" th:onclick="window.open([[${tempCar.seoUrl}]], '_blank', 'noopener,noreferrer');">Willhaben</button>
+    </div>
+    </div>
+</div>
+    
+    
+</div>
+
+</th:block>

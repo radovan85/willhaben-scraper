@@ -1,0 +1,120 @@
+/* Stilovi za desktop */
+.car-listing {
+	display: flex;
+	align-items: center;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: gray;
+}
+
+.car-listing img {
+    width: 200px; /* Fiksna širina slike */
+    height: 150px; /* Fiksna visina slike */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.car-details {
+	flex: 1;
+	font-size: 0.9em;
+	background-color: #ffa500;
+	color: #4511DD;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-details span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.location {
+	display: flex;
+	align-items: center;
+	font-style: italic;
+}
+
+.location-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	background-image: url('location-icon.png');
+	/* Zamijenite sa stvarnom putanjom do vaše ikone */
+	background-size: cover;
+}
+
+.price {
+	font-weight: bold;
+	color: #4CAF50;
+}
+
+.year, .mileage {
+	color: #555;
+}
+
+.address {
+	padding-left: 20px;
+	border-left: 2px solid #ddd;
+}
+
+.buttons-container {
+	display: flex;
+	justify-content: flex-end; /* Ako želite dugmad na desnoj strani */
+	padding-top: 10px; /* Dodaje razmak iznad dugmadi */
+}
+
+.details-btn, .willhaben-btn {
+	padding: 5px 15px;
+	margin-left: 10px; /* Razmak između dugmadi */
+	border: 1px solid #ffffff; /* Bela ivica */
+	background-color:  #740909; /* Providna pozadina */
+	color: #ffffff; /* Bela boja teksta */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.details-btn:hover, .willhaben-btn:hover {
+	background-color: #cccccc; /* Svetlo siva boja za hover efekat */
+	color: #333333; /* Tamno siva boja teksta */
+}
+
+@media only screen and (max-width: 600px) {
+	.car-listing {
+		display: flex;
+		flex-direction: row; /* Postavlja elemente u red */
+		align-items: flex-start; /* Poravnava elemente na vrh */
+		background-color: #ffa500; /* Narandžasta pozadina */
+	}
+	.car-listing img {
+    	width: 100px; /* Smanjuje širinu slike */
+    	height: 100px; /* Fiksna visina slike */
+    	margin-right: 10px; /* Dodaje razmak desno */
+	}
+	.car-details {
+		flex: 1;
+		padding: 10px; /* Smanjuje padding */
+		font-size: 0.8em; /* Smanjuje veličinu fonta */
+		background-color: #ffa500; /* Narandžasta pozadina */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between; /* Raspoređuje prostor između elemenata */
+	}
+	.car-details .description, .car-details .price {
+		display: flex;
+		flex-direction: row; /* Postavlja opis i cenu u red */
+		justify-content: space-between; /* Raspoređuje prostor između opisa i cene */
+	}
+	.car-details .additional-details {
+		margin-top: 10px; /* Dodaje razmak iznad dodatnih detalja */
+	}
+	.buttons-container {
+		justify-content: center; /* Centrira dugmad */
+		margin-top: 10px; /* Dodaje razmak iznad dugmadi */
+	}
+	.details-btn, .willhaben-btn {
+		margin-left: 0; /* Uklanja levi margin dugmadi */
+		margin-top: 10px; /* Dodaje razmak iznad dugmadi */
+	}
+}
