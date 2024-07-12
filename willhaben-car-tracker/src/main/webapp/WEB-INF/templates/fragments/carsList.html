@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="fragmentContent">
+	<link rel="stylesheet" type="text/css"
+		th:href="@{/css/components/carsList.css?newversion}" />
+
+	<div class="container py-3"  style="font-family: 'Oswald', serif;">
+            <div class="row" data-bind="foreach: cars">
+                <div class="col-12 col-md-6 col-lg-6 car-listing mb-4">
+                    <img data-bind="attr: { src: carImageUrl, alt: 'Slika automobila' }" class="img-fluid car-image mb-3">
+                    <h5 data-bind="text: description"></h5>
+                    <div class="d-flex align-items-center mb-2">
+                        <p class="price me-1">&euro;</p>
+                        <p class="price" data-bind="text: price"></p>
+                    </div>
+                    <p class="mb-1" data-bind="text: 'Year: ' + carYear()"></p>
+                    <p class="mb-1" data-bind="text: 'Mileage: ' + mileage()"></p>
+                    <p class="mb-1" data-bind="text: 'Published: ' + published()"></p>
+                    <p class="mb-1" data-bind="text: 'Location: ' + location() + ', ' + state() + ', ' + country()"></p>
+                    <button class="btn btn-primary willhaben-btn" data-bind="click: function() { window.open(seoUrl(), '_blank', 'noopener,noreferrer'); }">Willhaben</button>
+                </div>
+            </div>
+        </div>
+	
+
+<script type="module" th:src="@{/js/carViewModel.js?newversion}"></script>
+</th:block>

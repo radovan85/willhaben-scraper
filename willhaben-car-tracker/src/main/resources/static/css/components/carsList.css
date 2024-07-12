@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car-listing {
+    flex: 1 0 48%; /* Svaki listing zauzima oko 48% širine kontejnera */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border: 1px solid #007BFF;
+    padding: 1rem;
+    background-color: black;
+    color: #5E8DB5;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-image {
+    height: 150px; /* Smanjena visina slike */
+    object-fit: cover;
+    border: 3px solid #007BFF;
+    border-radius: 0.5rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #DB7F4A;
+}
+
+.willhaben-btn {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .car-listing {
+        padding: 0.5rem; /* Smanjena padding za mobilne uređaje */
+    }
+
+    .car-image {
+        height: 100px; /* Još manja visina slike za mobilne uređaje */
+    }
+
+    h5, p {
+        font-size: 0.9rem; /* Manji font za mobilne uređaje */
+    }
+
+    .mb-1 {
+        margin-bottom: 0.25rem !important; /* Smanjen razmak između podataka */
+    }
+}

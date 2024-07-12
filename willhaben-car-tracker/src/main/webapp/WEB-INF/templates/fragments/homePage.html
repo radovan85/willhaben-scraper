@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="fragmentContent">
+
+<div class="container mt-5 mb-5" style="font-family: 'Oswald', serif;color: #b9b7b7;">
+  <div class="p-5 bg-dark rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Welcome to Willhaben Car Tracker</h1>
+      <p class="col-md-8 fs-4">Follow your favorite cars and stay updated with the latest offers.</p>
+      <button class="btn btn-info" type="button" th:onclick="redirectAllCars()">Car List</button>
+    </div>
+  </div>
+</div>
+
+
+</th:block>
+
