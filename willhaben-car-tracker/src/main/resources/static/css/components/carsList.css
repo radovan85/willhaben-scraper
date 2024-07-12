@@ -1,0 +1,40 @@
+.car-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    width: 250px; /* Smanjena širina kartice */
+    border: 1px solid #ccc; /* Dodan border za karticu */
+    background-color: black; /* Crna pozadina */
+    color: lightblue; /* Svetlo plav tekst */
+}
+
+.car-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.car-details {
+    padding: 10px;
+}
+
+.car-image {
+    width: 100%; /* Širina slike duž celog car-card */
+    height: 150px; /* Fiksna visina slike */
+    object-fit: cover; /* Održava proporcije slike */
+}
+
+.price {
+    font-size: 1.2em;
+    color: lightblue; /* Svetlo plav tekst */
+}
+
+.location i {
+    margin-right: 5px;
+}

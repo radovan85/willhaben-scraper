@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/layouts :: head"></head>
+
+<body style="background-color: #ededed;">
+	<section th:replace="fragments/layouts :: header-section"></section>
+
+	<div id="axiosLoadedContent"></div>
+
+	
+	<script th:src="@{/js/main.js?newversion}"></script>
+
+</body>
+</html>
